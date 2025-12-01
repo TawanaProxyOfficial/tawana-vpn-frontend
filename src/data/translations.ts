@@ -132,6 +132,22 @@ export const translations = {
       order: 'سفارش',
       telegram: 'تلگرام',
     },
+    // Cart
+    cart: {
+      title: 'سبد خرید شما',
+      empty: 'سبد خرید خالی است',
+      emptyDescription: 'هنوز محصولی به سبد خرید اضافه نکرده‌اید',
+      continueShopping: 'ادامه خرید',
+      summary: 'خلاصه سفارش',
+      subtotal: 'جمع جزء',
+      discount: 'تخفیف',
+      total: 'قابل پرداخت',
+      discountCode: 'کد تخفیف',
+      enterCode: 'کد تخفیف خود را وارد کنید',
+      checkout: 'پرداخت امن',
+      guarantee: '۷ روز ضمانت بازگشت وجه',
+      currency: 'تومان',
+    },
     // Common
     common: {
       loading: 'در حال بارگذاری...',

@@ -1,2 +1,12 @@
 export { Home } from './Home';
 export { Admin } from './Admin';
+export { Cart } from './Cart';
+export { Checkout } from './Checkout';
+export { Login } from './Login';
+export { Dashboard } from './Dashboard';
+export { About } from './About';
+export { Contact } from './Contact';
+export { Download } from './Download';
+export { Features } from './Features';
+export { Pricing } from './Pricing';
+export { FAQ } from './FAQ';
