@@ -9,21 +9,29 @@ export const translations = {
     },
     // Hero
     hero: {
-      title: 'نسل جدید اینترنت آزاد',
+      title: 'اینترنت آزاد، امن و بدون محدودیت',
       subtitle: 'مرزها را محو کنید',
-      description: 'ترکیب V2Ray با هنر برای تجربه امن و سریع',
-      cta: 'شروع کنید',
+      description: 'تجربه VPN سطح جهانی با تکنولوژی V2Ray Reality - سریع، امن و بدون وقفه',
+      cta: 'همین الان شروع کن',
       demo: 'تماشای دمو',
       badges: {
         ping: 'پینگ < 50ms',
-        encryption: 'رمزنگاری نظامی',
+        encryption: 'رمزنگاری AES-256',
         access: 'دسترسی جهانی',
+      },
+      stats: {
+        users: '+۵۰,۰۰۰ کاربر فعال',
+        servers: '+۱۰۰ سرور',
+        uptime: '۹۹.۹٪ آپتایم',
+      },
+      platforms: {
+        title: 'در تمام پلتفرم‌ها',
       },
     },
     // Features
     features: {
-      title: 'تکنولوژی فراتر از انتظار شما',
-      subtitle: 'تکنولوژی نسل ۴',
+      title: 'چرا توانا پروکسی؟',
+      subtitle: 'ویژگی‌های برتر',
     },
     // Infrastructure
     infrastructure: {
@@ -110,6 +118,12 @@ export const translations = {
         title: 'قانونی',
         privacy: 'حریم خصوصی',
         terms: 'شرایط استفاده',
+      },
+      newsletter: {
+        title: 'خبرنامه',
+        description: 'از آخرین اخبار و تخفیف‌ها با خبر شوید',
+        placeholder: 'ایمیل شما',
+        button: 'عضویت',
       },
       copyright: 'ساخته شده با ❤️ برای آزادی اینترنت',
     },
