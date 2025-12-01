@@ -2,39 +2,75 @@ import type { Feature } from '../types';
 
 export const features: Feature[] = [
   {
+    id: 'encryption',
+    icon: 'Lock',
+    title: { fa: 'رمزنگاری نظامی AES-256', en: 'Military-Grade AES-256 Encryption' },
+    description: {
+      fa: 'امنیت حرفه‌ای با رمزنگاری استاندارد نظامی برای حفاظت کامل داده‌ها',
+      en: 'Professional security with military-standard encryption for complete data protection',
+    },
+  },
+  {
     id: 'speed',
-    icon: 'Rocket',
-    title: { fa: 'سرعت مافوق صوت', en: 'Supersonic Speed' },
-    description: {
-      fa: 'سرورهای NVMe با پورت ۱۰Gbps برای تجربه‌ای بی‌وقفه',
-      en: 'NVMe servers with 10Gbps ports for seamless experience',
-    },
-  },
-  {
-    id: 'security',
-    icon: 'Shield',
-    title: { fa: 'نامرئی و امن', en: 'Invisible & Secure' },
-    description: {
-      fa: 'تکنولوژی Reality + TLS 1.3 برای امنیت نظامی',
-      en: 'Reality + TLS 1.3 technology for military-grade security',
-    },
-  },
-  {
-    id: 'access',
-    icon: 'Globe',
-    title: { fa: 'دسترسی جهانی', en: 'Global Access' },
-    description: {
-      fa: 'Netflix, Spotify, YouTube و تمام سرویس‌های جهانی',
-      en: 'Netflix, Spotify, YouTube and all global services',
-    },
-  },
-  {
-    id: 'uptime',
     icon: 'Zap',
-    title: { fa: 'پایداری ۹۹.۹٪', en: '99.9% Uptime' },
+    title: { fa: 'سرعت نامحدود', en: 'Unlimited Speed' },
     description: {
-      fa: 'زیرساخت توزیع‌شده برای اتصال همیشگی',
-      en: 'Distributed infrastructure for always-on connection',
+      fa: 'بدون محدودیت پهنای باند، دانلود و آپلود با حداکثر سرعت',
+      en: 'No bandwidth throttling, download and upload at maximum speed',
+    },
+  },
+  {
+    id: 'servers',
+    icon: 'Globe',
+    title: { fa: '+۱۰۰ سرور در ۵۰ کشور', en: '+100 Servers in 50 Countries' },
+    description: {
+      fa: 'دسترسی به سرورهای پرسرعت در سراسر جهان با پایداری بالا',
+      en: 'Access to high-speed servers worldwide with high reliability',
+    },
+  },
+  {
+    id: 'devices',
+    icon: 'Smartphone',
+    title: { fa: 'یک اکانت، همه دستگاه‌ها', en: 'One Account, All Devices' },
+    description: {
+      fa: 'استفاده همزمان در موبایل، تبلت، لپتاپ و دسکتاپ',
+      en: 'Simultaneous use on mobile, tablet, laptop and desktop',
+    },
+  },
+  {
+    id: 'nolog',
+    icon: 'EyeOff',
+    title: { fa: 'بدون لاگ، بدون ردیابی', en: 'No Logs, No Tracking' },
+    description: {
+      fa: 'سیاست عدم ذخیره‌سازی لاگ - حریم خصوصی شما محفوظ است',
+      en: 'Zero-log policy - your privacy is protected',
+    },
+  },
+  {
+    id: 'killswitch',
+    icon: 'ShieldAlert',
+    title: { fa: 'Kill Switch خودکار', en: 'Automatic Kill Switch' },
+    description: {
+      fa: 'قطع خودکار اینترنت در صورت افت اتصال VPN',
+      en: 'Automatic internet disconnect if VPN connection drops',
+    },
+  },
+  {
+    id: 'update',
+    icon: 'RefreshCw',
+    title: { fa: 'آپدیت خودکار سرورها', en: 'Auto Server Updates' },
+    description: {
+      fa: 'به‌روزرسانی خودکار و هوشمند سرورها بدون نیاز به دخالت شما',
+      en: 'Automatic and smart server updates without your intervention',
+    },
+  },
+  {
+    id: 'support',
+    icon: 'Headphones',
+    title: { fa: 'پشتیبانی ۲۴/۷', en: '24/7 Support' },
+    description: {
+      fa: 'تیم پشتیبانی حرفه‌ای آماده پاسخگویی در هر لحظه',
+      en: 'Professional support team ready to respond at any moment',
     },
   },
 ];
