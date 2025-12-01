@@ -1,0 +1,174 @@
+/* Dark Theme - Spotify-inspired Premium Design */
+
+.dark {
+  /* Background Colors - Spotify-like */
+  --bg-primary: #121212;
+  --bg-secondary: #181818;
+  --bg-elevated: #282828;
+  --bg-highlight: #333333;
+  --bg-base: #000000;
+  
+  /* Text Colors */
+  --text-primary: #FFFFFF;
+  --text-secondary: #B3B3B3;
+  --text-tertiary: #6A6A6A;
+  --text-muted: #535353;
+  
+  /* Accent Colors */
+  --accent-primary: #1DB954;      /* Spotify Green */
+  --accent-tawana: #00D4AA;       /* Tawana Green */
+  --accent-purple: #7C3AED;       /* Purple */
+  --accent-blue: #0ea5e9;         /* Blue */
+  --accent-gold: #F59E0B;         /* Gold */
+  
+  /* Border Colors */
+  --border-primary: rgba(255, 255, 255, 0.1);
+  --border-secondary: rgba(255, 255, 255, 0.05);
+  --border-focus: #00D4AA;
+  
+  /* Glow Effects */
+  --glow-primary: 0 0 40px rgba(0, 212, 170, 0.4);
+  --glow-secondary: 0 0 40px rgba(124, 58, 237, 0.3);
+  --glow-accent: 0 0 30px rgba(29, 185, 84, 0.3);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.7);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #00D4AA, #7C3AED);
+  --gradient-secondary: linear-gradient(135deg, #1DB954, #00D4AA);
+  --gradient-accent: linear-gradient(135deg, #7C3AED, #0ea5e9);
+  
+  /* Background Styles */
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Dark Theme Card Styles */
+.dark .card {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.dark .card:hover {
+  background-color: var(--bg-elevated);
+  border-color: var(--border-focus);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Dark Theme Button Styles */
+.dark .btn-primary {
+  background: var(--gradient-primary);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.dark .btn-primary:hover {
+  box-shadow: var(--glow-primary);
+  transform: translateY(-2px);
+}
+
+.dark .btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--border-primary);
+  color: var(--text-primary);
+}
+
+.dark .btn-secondary:hover {
+  background-color: var(--bg-elevated);
+  border-color: var(--accent-tawana);
+}
+
+/* Dark Theme Input Styles */
+.dark .input {
+  background-color: var(--bg-elevated);
+  border-color: var(--border-primary);
+  color: var(--text-primary);
+}
+
+.dark .input:focus {
+  border-color: var(--accent-tawana);
+  box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.1);
+}
+
+.dark .input::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* Dark Theme Glass Effect */
+.dark .glass {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-color: var(--border-primary);
+}
+
+.dark .glass-hover:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--border-focus);
+}
+
+/* Dark Theme Scrollbar */
+.dark::-webkit-scrollbar-track {
+  background-color: var(--bg-primary);
+}
+
+.dark::-webkit-scrollbar-thumb {
+  background-color: var(--bg-elevated);
+  border-radius: 10px;
+}
+
+.dark::-webkit-scrollbar-thumb:hover {
+  background-color: var(--bg-highlight);
+}
+
+/* Dark Theme Navigation */
+.dark nav {
+  background-color: rgba(18, 18, 18, 0.9);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-secondary);
+}
+
+/* Dark Theme Hover Glow */
+.dark .hover-glow:hover {
+  box-shadow: var(--glow-primary);
+}
+
+/* Dark Theme Text Colors */
+.dark .text-muted {
+  color: var(--text-muted);
+}
+
+.dark .text-secondary {
+  color: var(--text-secondary);
+}
+
+/* Dark Theme Gradient Text */
+.dark .gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Dark Theme Feature Highlights */
+.dark .feature-highlight {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 212, 170, 0.1) 0%,
+    rgba(124, 58, 237, 0.1) 100%
+  );
+  border: 1px solid var(--border-primary);
+}
+
+.dark .feature-highlight:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 212, 170, 0.15) 0%,
+    rgba(124, 58, 237, 0.15) 100%
+  );
+  border-color: var(--accent-tawana);
+}

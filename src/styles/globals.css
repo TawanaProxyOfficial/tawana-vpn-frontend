@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "./themes/dark.css";
+@import "./themes/light.css";
 
 @theme {
   --font-sans: "Vazirmatn", system-ui, sans-serif;

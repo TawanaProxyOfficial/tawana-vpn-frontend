@@ -13,6 +13,7 @@ import {
   Footer,
   FloatingElements,
 } from '../components/organisms';
+import { ScrollRewards, FloatingSupport } from '../components/ui';
 
 export function Home() {
   const { theme, toggleTheme } = useTheme();
@@ -39,6 +40,8 @@ export function Home() {
       </main>
       <Footer language={language} t={t} />
       <FloatingElements language={language} t={t} />
+      <ScrollRewards />
+      <FloatingSupport />
     </PageLayout>
   );
 }
