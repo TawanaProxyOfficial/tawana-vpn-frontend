@@ -1,0 +1,11 @@
+export { Header } from './Header';
+export { HeroSection } from './HeroSection';
+export { FeaturesSection } from './FeaturesSection';
+export { InfrastructureSection } from './InfrastructureSection';
+export { AIAssistantSection } from './AIAssistantSection';
+export { PricingSection } from './PricingSection';
+export { WhyUsSection } from './WhyUsSection';
+export { BlogSection } from './BlogSection';
+export { FAQSection } from './FAQSection';
+export { Footer } from './Footer';
+export { FloatingElements } from './FloatingElements';
