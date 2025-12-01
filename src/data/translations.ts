@@ -119,6 +119,12 @@ export const translations = {
         privacy: 'حریم خصوصی',
         terms: 'شرایط استفاده',
       },
+      newsletter: {
+        title: 'خبرنامه',
+        description: 'از آخرین اخبار و تخفیف‌ها با خبر شوید',
+        placeholder: 'ایمیل شما',
+        button: 'عضویت',
+      },
       copyright: 'ساخته شده با ❤️ برای آزادی اینترنت',
     },
     // Floating
