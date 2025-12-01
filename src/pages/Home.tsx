@@ -13,7 +13,7 @@ import {
   Footer,
   FloatingElements,
 } from '../components/organisms';
-import { ScrollRewards, FloatingSupport } from '../components/ui';
+import { ScrollRewards, FloatingSupport, ScrollProgress } from '../components/ui';
 
 export function Home() {
   const { theme, toggleTheme } = useTheme();
@@ -21,6 +21,7 @@ export function Home() {
 
   return (
     <PageLayout>
+      <ScrollProgress />
       <Header
         language={language}
         theme={theme}

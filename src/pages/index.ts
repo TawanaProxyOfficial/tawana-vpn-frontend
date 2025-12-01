@@ -4,3 +4,6 @@ export { Cart } from './Cart';
 export { Checkout } from './Checkout';
 export { Login } from './Login';
 export { Dashboard } from './Dashboard';
+export { About } from './About';
+export { Contact } from './Contact';
+export { Download } from './Download';
