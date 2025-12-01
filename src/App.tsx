@@ -8,7 +8,10 @@ import {
   Dashboard,
   About,
   Contact,
-  Download
+  Download,
+  Features,
+  Pricing,
+  FAQ
 } from './pages';
 import { ThemeProvider, LanguageProvider, CartProvider, AuthProvider } from './context';
 
@@ -30,6 +33,9 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/download" element={<Download />} />
+                <Route path="/features" element={<Features />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/faq" element={<FAQ />} />
               </Routes>
             </CartProvider>
           </AuthProvider>

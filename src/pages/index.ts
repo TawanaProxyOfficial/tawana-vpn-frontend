@@ -7,3 +7,6 @@ export { Dashboard } from './Dashboard';
 export { About } from './About';
 export { Contact } from './Contact';
 export { Download } from './Download';
+export { Features } from './Features';
+export { Pricing } from './Pricing';
+export { FAQ } from './FAQ';
