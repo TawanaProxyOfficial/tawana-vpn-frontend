@@ -37,11 +37,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* برای header ثابت */
   }
 
   body {
     @apply font-sans antialiased;
     font-family: "Vazirmatn", system-ui, sans-serif;
+    line-height: var(--line-height-fa);
   }
 
   :root {

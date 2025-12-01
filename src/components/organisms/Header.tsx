@@ -46,15 +46,25 @@ export function Header({ language, theme, onToggleLanguage, onToggleTheme, t }: 
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
+          {/* Logo - لوگو */}
           <motion.a
             href="#"
             whileHover={{ scale: 1.05 }}
             className="flex items-center gap-2"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-cyan-500 flex items-center justify-center">
-              <Icon name="Shield" size={24} className="text-white" />
-            </div>
+            <motion.div 
+              animate={isScrolled ? {} : { 
+                boxShadow: [
+                  '0 0 15px rgba(0, 212, 170, 0.3)',
+                  '0 0 25px rgba(0, 212, 170, 0.5)',
+                  '0 0 15px rgba(0, 212, 170, 0.3)',
+                ]
+              }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00D4AA] to-[#6366F1] flex items-center justify-center"
+            >
+              <Icon name="Zap" size={24} className="text-white" />
+            </motion.div>
             <span className="text-xl font-bold gradient-text">
               {SITE_CONFIG.name}
             </span>
@@ -102,46 +112,71 @@ export function Header({ language, theme, onToggleLanguage, onToggleTheme, t }: 
 
             {/* Login Button */}
             <Button variant="primary" size="sm" className="hidden md:flex">
+              <Icon name="LogIn" size={16} />
               {t('nav.login')}
             </Button>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - دکمه منوی موبایل */}
             <motion.button
               whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg dark:hover:bg-white/10 light:hover:bg-gray-100"
+              className={cn(
+                'md:hidden p-2 rounded-lg transition-all duration-300',
+                isMobileMenuOpen
+                  ? 'bg-[#00D4AA]/20 text-[#00D4AA]'
+                  : 'dark:hover:bg-white/10 light:hover:bg-gray-100 dark:text-white light:text-gray-700'
+              )}
             >
-              <Icon
-                name={isMobileMenuOpen ? 'X' : 'Menu'}
-                size={24}
-                className="dark:text-white light:text-gray-700"
-              />
+              <motion.div
+                animate={{ rotate: isMobileMenuOpen ? 90 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Icon
+                  name={isMobileMenuOpen ? 'X' : 'Menu'}
+                  size={24}
+                />
+              </motion.div>
             </motion.button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - منوی موبایل */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
             className="md:hidden overflow-hidden dark:bg-black/95 light:bg-white/95 backdrop-blur-xl border-b dark:border-white/10 light:border-gray-200"
           >
-            <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
-              {menuItems.map((item) => (
-                <MenuItem
+            <nav className="container mx-auto px-4 py-6 flex flex-col gap-3">
+              {menuItems.map((item, index) => (
+                <motion.div
                   key={item.sectionId}
-                  label={item.label}
-                  sectionId={item.sectionId}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                />
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <MenuItem
+                    label={item.label}
+                    sectionId={item.sectionId}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  />
+                </motion.div>
               ))}
-              <Button variant="primary" className="mt-4">
-                {t('nav.login')}
-              </Button>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: menuItems.length * 0.1 }}
+              >
+                <Button variant="primary" className="w-full mt-2">
+                  <Icon name="LogIn" size={18} />
+                  {t('nav.login')}
+                </Button>
+              </motion.div>
             </nav>
           </motion.div>
         )}
