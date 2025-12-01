@@ -12,7 +12,7 @@ export function Icon({ name, size = 24, className }: IconProps) {
   const IconComponent = (LucideIcons as unknown as Record<string, React.FC<LucideProps>>)[name];
   
   if (!IconComponent) {
-    console.warn(`Icon "${name}" not found`);
+    // Icon not found - render nothing
     return null;
   }
 

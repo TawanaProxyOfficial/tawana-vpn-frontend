@@ -21,7 +21,9 @@ interface AdminState {
   resetToDefaults: () => void;
 }
 
-const ADMIN_PASSWORD = 'tawana2025';
+// Note: In production, this should be handled by a proper authentication backend
+// For demo purposes, the password is stored here
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || 'tawana2025';
 
 const defaultSettings: AdminSettings = {
   primaryColor: '#22c55e',

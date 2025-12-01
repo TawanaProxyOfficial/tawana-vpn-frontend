@@ -19,6 +19,7 @@ export function Admin() {
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState(false);
   const [activeTab, setActiveTab] = useState<'plans' | 'faqs' | 'settings'>('plans');
+  const [editMessage, setEditMessage] = useState<string | null>(null);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,6 +28,11 @@ export function Admin() {
       setLoginError(true);
       setTimeout(() => setLoginError(false), 2000);
     }
+  };
+
+  const showEditMessage = () => {
+    setEditMessage('ویرایش در نسخه بعدی اضافه خواهد شد');
+    setTimeout(() => setEditMessage(null), 2000);
   };
 
   if (!isAuthenticated) {
@@ -138,6 +144,11 @@ export function Admin() {
                 مدیریت پلن‌ها
               </h2>
               <div className="space-y-4">
+                {editMessage && (
+                  <div className="p-3 rounded-xl bg-yellow-500/20 text-yellow-500 text-sm text-center">
+                    {editMessage}
+                  </div>
+                )}
                 {plans.map((plan) => (
                   <div
                     key={plan.id}
@@ -156,7 +167,7 @@ export function Admin() {
                       </p>
                     </div>
                     <div className="flex gap-2">
-                      <Button variant="ghost" size="sm">
+                      <Button variant="ghost" size="sm" onClick={showEditMessage} title="ویرایش (بزودی)">
                         <Icon name="Edit" size={16} />
                       </Button>
                     </div>
@@ -190,7 +201,7 @@ export function Admin() {
                           {faq.answer.fa}
                         </p>
                       </div>
-                      <Button variant="ghost" size="sm">
+                      <Button variant="ghost" size="sm" onClick={showEditMessage} title="ویرایش (بزودی)">
                         <Icon name="Edit" size={16} />
                       </Button>
                     </div>
