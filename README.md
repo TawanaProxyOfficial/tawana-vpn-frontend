@@ -1,124 +1,73 @@
-<div align="center">
+# React + TypeScript + Vite
 
-# 🌐 Tawana Proxy
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-**صفحه فرود حرفه‌ای برای خدمات VPN و پروکسی**
+Currently, two official plugins are available:
 
-**Professional Landing Page for VPN & Proxy Services**
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Click_Here-22c55e?style=for-the-badge)](https://tawanaproxyofficial.github.io/tawana-vpn-frontend/)
-[![GitHub stars](https://img.shields.io/github/stars/TawanaProxyOfficial/tawana-vpn-frontend?style=for-the-badge)](https://github.com/TawanaProxyOfficial/tawana-vpn-frontend/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/TawanaProxyOfficial/tawana-vpn-frontend?style=for-the-badge)](https://github.com/TawanaProxyOfficial/tawana-vpn-frontend/network/members)
-[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
+## React Compiler
 
-[🚀 Live Demo](https://tawanaproxyofficial.github.io/tawana-vpn-frontend/) • 
-[📱 تلگرام](https://t.me/TawanaProxy) • 
-[🐛 گزارش باگ](https://github.com/TawanaProxyOfficial/tawana-vpn-frontend/issues)
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-</div>
+## Expanding the ESLint configuration
 
----
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## ✨ ویژگی‌ها | Features
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-- 🎨 طراحی مدرن و زیبا با Dark Mode
-- ⚡ سرعت بالا با React + Vite
-- 📱 کاملاً رسپانسیو (Mobile-First)
-- 🌍 دو زبانه (فارسی + انگلیسی)
-- 🎬 انیمیشن‌های روان با Framer Motion
-- 🔍 بهینه‌سازی SEO
-- ♿ دسترسی‌پذیری (Accessibility)
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
----
-
-## 🛠️ تکنولوژی‌ها | Tech Stack
-
-| تکنولوژی | توضیح |
-|----------|-------|
-| React 18 | کتابخانه UI |
-| Vite | باندلر سریع |
-| Tailwind CSS | استایل‌دهی |
-| Framer Motion | انیمیشن |
-| Lucide Icons | آیکون‌ها |
-| TypeScript | تایپ‌سیف |
-
----
-
-## 🚀 نصب و اجرا | Installation
-
-### پیش‌نیازها | Prerequisites
-
-- Node.js 18+
-- npm یا yarn
-
-### مراحل نصب | Setup Steps
-
-```bash
-# کلون ریپازیتوری | Clone the repository
-git clone https://github.com/TawanaProxyOfficial/tawana-vpn-frontend.git
-
-# ورود به پوشه پروژه | Navigate to project directory
-cd tawana-vpn-frontend
-
-# نصب وابستگی‌ها | Install dependencies
-npm install
-
-# اجرای محیط توسعه | Start development server
-npm run dev
-
-# ساخت نسخه تولید | Build for production
-npm run build
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
----
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-## 📁 ساختار پوشه‌ها | Project Structure
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-tawana-vpn-frontend/
-├── src/
-│   ├── components/     # کامپوننت‌های React
-│   ├── pages/          # صفحات
-│   ├── assets/         # تصاویر و فایل‌های استاتیک
-│   ├── styles/         # استایل‌ها و CSS
-│   ├── hooks/          # کاستم هوک‌ها
-│   ├── utils/          # توابع کمکی
-│   └── constants/      # ثابت‌ها
-├── public/             # فایل‌های عمومی
-├── docs/               # مستندات
-└── .github/            # تنظیمات GitHub
-```
-
----
-
-## 🤝 مشارکت | Contributing
-
-از مشارکت شما استقبال می‌کنیم! لطفاً [راهنمای مشارکت](CONTRIBUTING.md) را مطالعه کنید.
-
-We welcome contributions! Please read our [Contributing Guide](CONTRIBUTING.md).
-
----
-
-## 📄 لایسنس | License
-
-این پروژه تحت لایسنس MIT منتشر شده است. برای جزئیات بیشتر [LICENSE](LICENSE) را ببینید.
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👨‍💻 توسعه‌دهنده | Developer
-
-<div align="center">
-
-**توانا محمدی (Tawana Mohammadi)**
-
-🌐 برند: توانا پروکسی (Tawana Proxy)
-
-📱 تلگرام: [@TawanaProxy](https://t.me/TawanaProxy)
-
----
-
-**MIT License - Copyright (c) 2024 Tawana Mohammadi**
-
-</div>

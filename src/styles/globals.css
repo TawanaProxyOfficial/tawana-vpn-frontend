@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Vazirmatn", system-ui, sans-serif;
+  
+  --color-primary-green: #22c55e;
+  --color-primary-blue: #0ea5e9;
+  --color-accent: #8b5cf6;
+  
+  --color-dark-bg: #0a0a0a;
+  --color-dark-bg-secondary: #141414;
+  --color-dark-border: #27272a;
+  --color-dark-text: #ffffff;
+  --color-dark-text-muted: #a1a1aa;
+  
+  --color-light-bg: #ffffff;
+  --color-light-bg-secondary: #f8fafc;
+  --color-light-border: #e4e4e7;
+  --color-light-text: #18181b;
+  --color-light-text-muted: #71717a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    font-family: "Vazirmatn", system-ui, sans-serif;
+  }
+
+  :root {
+    --primary-gradient: linear-gradient(135deg, #22c55e, #0ea5e9);
+  }
+
+  /* Dark Mode */
+  .dark {
+    @apply bg-[#0a0a0a] text-white;
+  }
+
+  /* Light Mode */
+  .light {
+    @apply bg-white text-gray-900;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .dark::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 rounded-full;
+  }
+
+  .light::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-600;
+  }
+}
+
+@layer components {
+  /* Glass Effect */
+  .glass {
+    @apply backdrop-blur-xl border;
+  }
+
+  .dark .glass {
+    @apply bg-white/5 border-white/10;
+  }
+
+  .light .glass {
+    @apply bg-black/5 border-black/10;
+  }
+
+  /* Glow Effects */
+  .glow-green {
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.4);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.4);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent;
+  }
+
+  /* Primary Button */
+  .btn-primary {
+    @apply relative px-8 py-3 rounded-xl font-semibold text-white overflow-hidden transition-all duration-300;
+    background: linear-gradient(135deg, #22c55e, #0ea5e9);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(34, 197, 94, 0.3);
+  }
+
+  /* Secondary Button */
+  .btn-secondary {
+    @apply px-8 py-3 rounded-xl font-semibold border-2 transition-all duration-300;
+  }
+
+  .dark .btn-secondary {
+    @apply border-white/20 text-white hover:bg-white/10;
+  }
+
+  .light .btn-secondary {
+    @apply border-gray-300 text-gray-800 hover:bg-gray-100;
+  }
+
+  /* Card */
+  .card {
+    @apply rounded-2xl p-6 transition-all duration-300;
+  }
+
+  .dark .card {
+    @apply bg-white/5 border border-white/10 hover:border-white/20;
+  }
+
+  .light .card {
+    @apply bg-white border border-gray-200 hover:border-gray-300 shadow-lg;
+  }
+
+  /* Input */
+  .input {
+    @apply w-full px-4 py-3 rounded-xl border outline-none transition-all duration-200;
+  }
+
+  .dark .input {
+    @apply bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-green-500;
+  }
+
+  .light .input {
+    @apply bg-gray-50 border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-green-500;
+  }
+
+  /* Animation Keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  @keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-bounce-subtle {
+    animation: bounce-subtle 2s ease-in-out infinite;
+  }
+
+  /* Gradient Mesh Background */
+  .gradient-mesh {
+    background: 
+      radial-gradient(at 40% 20%, hsla(162, 84%, 32%, 0.3) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsla(189, 86%, 32%, 0.3) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsla(259, 76%, 45%, 0.2) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, hsla(162, 84%, 32%, 0.2) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(189, 86%, 32%, 0.2) 0px, transparent 50%);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
