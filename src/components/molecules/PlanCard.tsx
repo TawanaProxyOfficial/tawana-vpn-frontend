@@ -10,11 +10,15 @@ interface PlanCardProps {
   billingPeriod?: 'monthly' | 'yearly';
 }
 
+// Constants for pricing configuration
+const YEARLY_DISCOUNT_RATE = 0.4; // 40% discount
+const YEARLY_PRICE_MULTIPLIER = 1 - YEARLY_DISCOUNT_RATE; // 0.6 = 60% of original price
+const MONTHS_IN_YEAR = 12;
+
 export function PlanCard({ plan, language, onBuy, billingPeriod = 'monthly' }: PlanCardProps) {
   const isEnterprise = plan.id === 'enterprise';
-  const yearlyDiscount = 0.6; // 40% تخفیف = ۶۰٪ قیمت نهایی
   const displayPrice = billingPeriod === 'yearly' && !isEnterprise 
-    ? Math.round(plan.price * yearlyDiscount * 12)
+    ? Math.round(plan.price * YEARLY_PRICE_MULTIPLIER * MONTHS_IN_YEAR)
     : plan.price;
 
   return (

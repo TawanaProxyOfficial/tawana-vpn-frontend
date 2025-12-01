@@ -41,7 +41,7 @@ export function HeroSection({ t }: HeroSectionProps) {
 
   const platforms = [
     { name: 'Android', icon: 'Smartphone' },
-    { name: 'iOS', icon: 'Apple' as const },
+    { name: 'iOS', icon: 'Smartphone' },
     { name: 'Windows', icon: 'Monitor' },
     { name: 'macOS', icon: 'Laptop' },
     { name: 'Linux', icon: 'Terminal' },
@@ -252,15 +252,16 @@ export function HeroSection({ t }: HeroSectionProps) {
       </div>
 
       {/* Scroll Indicator - نشانگر اسکرول */}
-      <motion.div
+      <motion.a
+        href="#features"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
         transition={{ duration: 1.5, repeat: Infinity, delay: 2 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer"
-        onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+        aria-label="Scroll to features section"
       >
         <Icon name="ChevronDown" size={32} className="dark:text-white/50 light:text-gray-400" />
-      </motion.div>
+      </motion.a>
     </section>
   );
 }

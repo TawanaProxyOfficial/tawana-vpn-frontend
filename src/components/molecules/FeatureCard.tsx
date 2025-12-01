@@ -100,12 +100,7 @@ export function FeatureCard({ feature, language, index }: FeatureCardProps) {
       </p>
       
       {/* Shine effect on hover - افکت نور */}
-      <motion.div
-        className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-        style={{
-          background: 'radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(0, 212, 170, 0.1), transparent 40%)',
-        }}
-      />
+      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-[#00D4AA]/10 to-transparent" />
     </motion.div>
   );
 }

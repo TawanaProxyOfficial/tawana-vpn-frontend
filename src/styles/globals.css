@@ -235,8 +235,10 @@
     }
   }
   
+  /* Reduced duration and will-change for better performance */
   .animate-particle {
-    animation: particle-float 8s ease-in-out infinite;
+    animation: particle-float 6s ease-in-out infinite;
+    will-change: transform, opacity;
   }
   
   /* Shimmer Effect - افکت درخشش */

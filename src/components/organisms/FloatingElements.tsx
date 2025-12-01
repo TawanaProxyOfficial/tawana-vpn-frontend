@@ -5,7 +5,7 @@ import type { Language } from '../../types';
 import { cn } from '../../utils/helpers';
 
 interface FloatingElementsProps {
-  language: Language;
+  language?: Language; // Not currently used but kept for future language-specific features
   t: (key: string) => string;
 }
 
