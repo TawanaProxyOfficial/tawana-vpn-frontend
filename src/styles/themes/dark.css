@@ -1,12 +1,13 @@
-/* Dark Theme - Spotify-inspired Premium Design */
+/* Dark Theme - Ultra Premium Cyberpunk Design */
 
 .dark {
-  /* Background Colors - Spotify-like */
-  --bg-primary: #121212;
-  --bg-secondary: #181818;
-  --bg-elevated: #282828;
-  --bg-highlight: #333333;
+  /* Background Colors - Deep Black Cyberpunk */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #121212;
+  --bg-elevated: #1a1a1a;
+  --bg-highlight: #161616;
   --bg-base: #000000;
+  --bg-card: #161616;
   
   /* Text Colors */
   --text-primary: #FFFFFF;
@@ -14,22 +15,24 @@
   --text-tertiary: #6A6A6A;
   --text-muted: #535353;
   
-  /* Accent Colors */
-  --accent-primary: #1DB954;      /* Spotify Green */
+  /* Accent Colors - Neon Cyberpunk */
+  --accent-primary: #00D4AA;      /* Neon Teal */
   --accent-tawana: #00D4AA;       /* Tawana Green */
-  --accent-purple: #7C3AED;       /* Purple */
-  --accent-blue: #0ea5e9;         /* Blue */
-  --accent-gold: #F59E0B;         /* Gold */
+  --accent-purple: #7C3AED;       /* Electric Purple */
+  --accent-blue: #0ea5e9;         /* Cyber Blue */
+  --accent-gold: #F59E0B;         /* Gold Accent */
   
-  /* Border Colors */
-  --border-primary: rgba(255, 255, 255, 0.1);
+  /* Border Colors - Neon Glow */
+  --border-primary: rgba(0, 212, 170, 0.2);
   --border-secondary: rgba(255, 255, 255, 0.05);
-  --border-focus: #00D4AA;
+  --border-focus: rgba(0, 212, 170, 0.5);
+  --border-glow: 1px solid rgba(0, 212, 170, 0.3);
+  --border-card: 1px solid rgba(255, 255, 255, 0.05);
   
-  /* Glow Effects */
-  --glow-primary: 0 0 40px rgba(0, 212, 170, 0.4);
-  --glow-secondary: 0 0 40px rgba(124, 58, 237, 0.3);
-  --glow-accent: 0 0 30px rgba(29, 185, 84, 0.3);
+  /* Neon Glow Effects */
+  --glow-primary: 0 0 30px rgba(0, 212, 170, 0.5), 0 0 60px rgba(0, 212, 170, 0.3);
+  --glow-secondary: 0 0 30px rgba(124, 58, 237, 0.5);
+  --glow-accent: 0 0 20px rgba(0, 212, 170, 0.4);
   
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
@@ -37,10 +40,11 @@
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
   --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.7);
   
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #00D4AA, #7C3AED);
-  --gradient-secondary: linear-gradient(135deg, #1DB954, #00D4AA);
-  --gradient-accent: linear-gradient(135deg, #7C3AED, #0ea5e9);
+  /* Gradients - Cyberpunk Neon */
+  --gradient-primary: linear-gradient(135deg, #00D4AA 0%, #7C3AED 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(0,212,170,0.3) 0%, rgba(124,58,237,0.3) 100%);
+  --gradient-secondary: linear-gradient(135deg, #00D4AA, #0ea5e9);
+  --gradient-accent: linear-gradient(135deg, #7C3AED, #F59E0B);
   
   /* Background Styles */
   background-color: var(--bg-primary);

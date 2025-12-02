@@ -10,3 +10,6 @@ export { Download } from './Download';
 export { Features } from './Features';
 export { Pricing } from './Pricing';
 export { FAQ } from './FAQ';
+export { Terms } from './Terms';
+export { Privacy } from './Privacy';
+export { Refund } from './Refund';

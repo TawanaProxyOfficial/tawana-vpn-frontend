@@ -8,18 +8,18 @@
   --bg-glass: rgba(255, 255, 255, 0.25);
   --bg-glass-hover: rgba(255, 255, 255, 0.4);
   
-  /* Text Colors */
-  --text-primary: #1E293B;
-  --text-secondary: #64748B;
-  --text-tertiary: #94A3B8;
-  --text-muted: #CBD5E1;
+  /* Text Colors - High Contrast for Readability */
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a6a;
+  --text-tertiary: #6a6a8a;
+  --text-muted: #8a8aaa;
   
-  /* Accent Colors */
-  --accent-primary: #00D4AA;
-  --accent-secondary: #7C3AED;
-  --accent-blue: #0ea5e9;
-  --accent-gold: #F59E0B;
-  --accent-rose: #F43F5E;
+  /* Accent Colors - Darker for Better Contrast */
+  --accent-primary: #00B894;
+  --accent-secondary: #6C5CE7;
+  --accent-blue: #0984e3;
+  --accent-gold: #fdcb6e;
+  --accent-rose: #d63031;
   
   /* Border Colors */
   --border-primary: rgba(0, 0, 0, 0.1);
