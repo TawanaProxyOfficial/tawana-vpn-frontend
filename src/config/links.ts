@@ -21,7 +21,7 @@ export const LINKS = {
   
   // Support
   SUPPORT_PHONE: "+989901120235",
-  SUPPORT_EMAIL: "support@tawana.proxy",
+  SUPPORT_EMAIL: "support@tawanaproxy.com",
   
   // Social Media (Add as needed)
   INSTAGRAM: "#",
@@ -43,6 +43,8 @@ export const CONTACT_INFO = {
   support: LINKS.TELEGRAM_SUPPORT,
   address: "تهران، ایران",
 };
+
+// Note: Update SUPPORT_EMAIL with your actual domain when available
 
 export const BUSINESS_HOURS = {
   weekdays: "۹:۰۰ - ۱۸:۰۰",

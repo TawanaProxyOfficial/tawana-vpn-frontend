@@ -291,6 +291,10 @@
   /* Optimized duration and reduced particle count for better performance */
   .animate-particle {
     animation: particle-float 4s ease-in-out infinite;
+  }
+  
+  /* Only apply will-change when actively animating to avoid performance issues */
+  .animate-particle:hover {
     will-change: transform;
   }
   

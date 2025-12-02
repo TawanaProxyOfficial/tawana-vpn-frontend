@@ -204,10 +204,10 @@ export function Download() {
                   </div>
                 </div>
               </div>
-              <div className="w-48 h-48 rounded-2xl bg-white p-4 flex items-center justify-center shadow-2xl">
+              <div className="w-48 h-48 rounded-2xl p-4 flex items-center justify-center shadow-2xl border-2 dark:bg-white dark:border-white light:bg-gray-100 light:border-gray-300">
                 <div className="text-center">
                   <QrCode className="w-32 h-32 text-gray-800 mx-auto mb-2" />
-                  <p className="text-xs text-gray-600">QR Code</p>
+                  <p className="text-xs text-gray-600">اسکن کنید</p>
                 </div>
               </div>
             </div>
